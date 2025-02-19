@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Broker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login & Signup Section -->
+    <div id="auth-section">
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error"></p>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+        </div>
+
+        <div id="signup-section" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" id="name" placeholder="Enter Name" required>
+                <input type="email" id="signup-email" placeholder="Enter Email" required>
+                <input type="password" id="signup-password" placeholder="Enter Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="signup-error"></p>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" style="display: none;">
+        <h2>Mutual Fund Dashboard</h2>
+
+        <!-- Fund Selection -->
+        <div>
+            <h3>Select Fund</h3>
+            <select id="fund-family">
+                <option value="">Loading...</option>
+            </select>
+            <div id="fund-list"></div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div id="portfolio-section">
+            <h3>Your Portfolio</h3>
+            <div id="portfolio">Loading...</div>
+        </div>
+
+        <button id="logout">Logout</button>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="fundSelection.js"></script>
+    <script src="portfolio.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

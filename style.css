@@ -1,0 +1,77 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Containers for login and signup (same styling) */
+#login-section,
+#signup-section {
+    padding: 20px;
+    background-color: #fff;
+    width: 300px;
+    margin: 50px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements for login and signup */
+#login-section input,
+#login-section button,
+#signup-section input,
+#signup-section button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Button styling for login and signup */
+#login-section button,
+#signup-section button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#login-section button:hover,
+#signup-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard specific styling */
+#dashboard-section {
+    padding: 20px;
+    background-color: #fff;
+    width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fund list styling */
+#fund-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for individual fund items */
+.fund {
+    padding: 10px;
+    margin: 10px 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.fund:hover {
+    background-color: #f1f1f1;
+}
+
+/* Investment item styling */
+.investment-item {
+    padding: 10px;
+    margin: 10px 5px;
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
+}
