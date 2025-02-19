@@ -7,7 +7,9 @@ window.onload = function () {
         // Show dashboard and hide login/signup
         document.getElementById("auth-section").style.display = "none";
         document.getElementById("dashboard-section").style.display = "block";
-
+        
+        // Fetch and load families data
+        loadFundFamilies()
         // Fetch and load portfolio data
         loadPortfolio(userId);
     } else {

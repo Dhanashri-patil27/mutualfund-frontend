@@ -3,10 +3,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+    position: relative;
+    min-height: 100vh; /* Ensure the page takes at least full height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack content properly */
 }
 
-/* Containers for login and signup (same styling) */
+
+/* Floating circles animation */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(-20px); opacity: 0.8; }
+    100% { transform: translateY(0); opacity: 0.6; }
+}
+
+.circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+
+.circle:nth-child(1) { width: 100px; height: 100px; top: 10%; left: 20%; animation-duration: 5s; }
+.circle:nth-child(2) { width: 150px; height: 150px; top: 40%; left: 70%; animation-duration: 7s; }
+.circle:nth-child(3) { width: 200px; height: 200px; top: 70%; left: 30%; animation-duration: 9s; }
+
+/* Containers for login and signup */
 #login-section,
 #signup-section {
     padding: 20px;
@@ -14,9 +41,11 @@ body {
     width: 300px;
     margin: 50px auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
 }
 
-/* Form elements for login and signup */
+/* Form elements */
 #login-section input,
 #login-section button,
 #signup-section input,
@@ -26,13 +55,14 @@ body {
     margin: 10px 0;
 }
 
-/* Button styling for login and signup */
+/* Button styles */
 #login-section button,
 #signup-section button {
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 #login-section button:hover,
@@ -40,38 +70,46 @@ body {
     background-color: #0056b3;
 }
 
-/* Dashboard specific styling */
 #dashboard-section {
-    padding: 20px;
-    background-color: #fff;
-    width: 500px;
+    max-width: 600px;
     margin: 50px auto;
+    padding: 20px;
+    background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    overflow-y: auto;
 }
 
-/* Fund list styling */
+/* Fund Selection */
 #fund-list {
-    display: flex;
-    flex-direction: column;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
 }
 
-/* Styling for individual fund items */
+
+/* Fund items */
 .fund {
     padding: 10px;
     margin: 10px 5px;
     background-color: #fff;
     border: 1px solid #ccc;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .fund:hover {
     background-color: #f1f1f1;
 }
 
-/* Investment item styling */
+/* Portfolio item */
 .investment-item {
     padding: 10px;
     margin: 10px 5px;
     background-color: #e3f2fd;
     border: 1px solid #90caf9;
+    border-radius: 5px;
 }

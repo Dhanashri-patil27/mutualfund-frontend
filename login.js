@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.getElementById("auth-section").style.display = "none";
                     document.getElementById("dashboard-section").style.display = "block";
 
-                    // Load portfolio for the logged-in user
+                    // Load portfolio and family for the logged-in user
+                    loadFundFamilies()
                     loadPortfolio(data.user.id);
                 } else {
                     document.getElementById("login-error").innerText = "Invalid credentials.";

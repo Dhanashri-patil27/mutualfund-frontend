@@ -79,7 +79,10 @@ document.getElementById('fund-family').addEventListener('change', async function
             schemes.forEach(scheme => {
                 const div = document.createElement('div');
                 div.classList.add('fund');
-                div.textContent = scheme.schemeName;
+                
+                // Include scheme name and NAV
+                div.innerHTML = `<strong>${scheme.schemeName}</strong><br> <span>NAV: ₹${scheme.NAV}</span>`;
+                
                 div.dataset.schemeCode = scheme.schemeCode;
 
                 div.addEventListener('click', () => selectFund(scheme));
@@ -92,6 +95,7 @@ document.getElementById('fund-family').addEventListener('change', async function
         console.error('Error loading fund schemes:', error);
     }
 });
+
 
 // Select a fund and add it to portfolio
 function selectFund(scheme) {
