@@ -10,7 +10,7 @@ function handleTokenExpiration() {
 // Load Fund Families
 async function loadFundFamilies() {
     try {
-        const response = await fetch('http://localhost:3000/api/funds/families', {
+        const response = await fetch('https://mutualfund-backend.onrender.com/api/funds/families', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ document.getElementById('fund-family').addEventListener('change', async function
 
     try {
         const encodedFamily = encodeURIComponent(family);
-        const response = await fetch(`http://localhost:3000/api/funds/schemes?family=${encodedFamily}`, {
+        const response = await fetch(`https://mutualfund-backend.onrender.com/api/funds/schemes?family=${encodedFamily}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ async function addFundToPortfolio(schemeCode, schemeName, units) {
     const purchasePrice = 100;  // This should be fetched based on the selected scheme or entered by the user
 
     try {
-        const response = await fetch('http://localhost:3000/api/portfolio/add', {
+        const response = await fetch('https://mutualfund-backend.onrender.com/api/portfolio/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

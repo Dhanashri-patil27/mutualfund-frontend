@@ -9,7 +9,7 @@ function loadPortfolio(userId) {
     const portfolioDiv = document.getElementById('portfolio');
 
     // Fetch portfolio data from API
-    fetch(`http://localhost:3000/api/portfolio/?userId=${userId}`, {
+    fetch(`https://mutualfund-backend.onrender.com/api/portfolio/?userId=${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (email && password) {
             try {
-                const response = await fetch("http://localhost:3000/api/users/login", {
+                const response = await fetch("https://mutualfund-backend.onrender.com/api/users/login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (name && email && password) {
             try {
-                const response = await fetch("http://localhost:3000/api/users/signup", {
+                const response = await fetch("https://mutualfund-backend.onrender.com/api/users/signup", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
