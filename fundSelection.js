@@ -99,23 +99,22 @@ document.getElementById('fund-family').addEventListener('change', async function
 
 // Select a fund and add it to portfolio
 function selectFund(scheme) {
+    console.log("🚀 ~ selectFund ~ scheme:", scheme)
     const units = prompt(`Enter units for ${scheme.schemeName}:`);
     if (units && !isNaN(units) && units > 0) {
-        addFundToPortfolio(scheme.schemeCode, scheme.schemeName, parseFloat(units));
+        addFundToPortfolio(scheme.schemeCode, scheme.schemeName, parseFloat(units), parseFloat(scheme.NAV));
     } else {
         alert('Invalid units!');
     }
 }
 
 // API call to add fund to portfolio and then reload the dashboard
-async function addFundToPortfolio(schemeCode, schemeName, units) {
+async function addFundToPortfolio(schemeCode, schemeName, units, purchasePrice) {
     const userId = localStorage.getItem('userId');
     if (!userId) {
         alert('User not logged in.');
         return;
     }
-
-    const purchasePrice = 100;  // This should be fetched based on the selected scheme or entered by the user
 
     try {
         const response = await fetch('https://mutualfund-backend.onrender.com/api/portfolio/add', {
