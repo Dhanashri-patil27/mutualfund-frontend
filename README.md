@@ -41,10 +41,6 @@ This frontend communicates with the backend API. Use the appropriate API base UR
 - **Local Testing**: `http://localhost:3000`
 - **Live Server**: `https://mutualfund-backend.onrender.com/`
 
-## Live Deployment
-The frontend is live at:
-**[Mutual Fund Broker Web Application Frontend](https://dhanashri-patil27.github.io/mutualfund-frontend/)**
-
 ## Backend Repository
 The backend code is available here:
 **[Backend Repository](https://github.com/Dhanashri-patil27/mutualfund-backend.git)**
